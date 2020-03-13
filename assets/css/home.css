@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    background: rgb(231, 228, 228);
+}
+.head{
+    color: grey;
+    /* border: 1px solid orange; */
+    margin-top: 40px;
+    padding: 0px;
+    margin-bottom: -12px;
+    font-size: 1.5rem;
+}
+.contact-book{
+    width: 300px;
+    height: 530px;
+    background: white;
+    box-shadow: 5px 5px lightgrey;
+}
+
+/*Contact List*/
+.contact{
+    display: inline-block;
+    /* border: 1px solid red; */
+    border-bottom: 0.5px solid lightgray;
+    width: 260px;
+    margin-left: 15px;
+    height: 295px;
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*Scroll bar*/
+
+/* width */
+.contact::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Handle */
+  .contact::-webkit-scrollbar-thumb {
+    background:rgba(128, 128, 128, 0.5);
+  }
+  /* Handle on hover */
+  .contact::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+/*Contact List*/
+.contact li{
+    list-style: none;
+    margin-bottom: 3px;
+}
+.contact p{
+    margin: 0px;
+}
+.contact ul{
+    padding-inline-start: 0px;
+}
+.content{
+    /* display: inline-block; */
+    width: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+}
+.data{
+    width: 90%;
+    /* border: 1px solid blue; */
+    justify-content: space-between;
+    display: flex;
+    color: white;
+    background-color: rgb(121, 185, 214);
+    font-size: 1.1rem;
+    
+}
+.delete{
+    /* display: inline-block; */
+    /* border: 1px solid blue; */
+    margin-left: 5px;
+}
+#phone{
+    /* display: inline-block; */
+    /* border: 1px solid yellow; */
+    margin-right: 5px;
+}
+#name{
+    /* display: inline-block; */
+    /* border: 1px solid orange; */
+    margin-left: 5px;
+}
+
+.delete i{
+    display: none;
+}
+li:hover i{
+    display: block;
+}
+
+
+/*form*/
+.form-name{
+    margin-top: 5px;
+}
+.form-name input{
+    margin-bottom: 7px;
+    margin-top: 2px;
+    border: 0px;
+    height: 25px;
+    border-bottom: 0.7px solid grey;
+    
+}
+.form-phone input{
+    margin-bottom: 5px;
+    border: 0px;
+    height: 25px;
+    border-bottom: 0.7px solid grey;
+}
+.form-button button{
+    font-size: 0.9rem;
+    margin-top: 5px;
+    border: none;
+    background-color: gray;
+    color: white;
+    height: 25px;
+    box-shadow: 3px 3px #bbbbbb;
+}
+form input:focus{
+    outline: none;
+}
+.form-button button:focus{
+    outline: none;
+}
+.form-button button:hover{
+    background-color: #bbbbbb;
+    box-shadow: 3px 3px gray;
+    color: black;
+}
+
+form input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+form input[type=number] {
+  -moz-appearance:textfield;
+}

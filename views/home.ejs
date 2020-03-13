@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/44c6087d03.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+    <body>
+        <div class="contact-book">
+            
+            <header class="head">
+                <h1><i class="far fa-address-book"></i> &nbspContacts</h1>
+            </header>
+            
+    
+            <div class="contact">
+                <ul>
+                    <% for(let i of contacts){ %>
+                        <li>
+                            <div  class="content">
+                                <div class="data">
+                                    <div id="name">
+                                        <p><%= i.name %></P>
+                                    </div>
+                                    <div id="phone">
+                                        <p><%= i.phone %></P>
+                                    </div>
+                                </div>
+                                 
+                                <div class="delete">
+                                    <a href="/delete-contact/<%= i._id %>">
+                                        <i class="fas fa-times-circle"></i>
+                                    </a>
+                                </div>
+    
+                            </div> 
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+    
+            <form action="/create-contact" method="POST" class="form">
+                <div class="form-name">
+                    <input type="text" name="name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-phone">
+                    <input type="number" name="phone" placeholder = "Enter Phone">
+                </div>
+                <div class="form-button">
+                    <button type="submit">Add Contact</button>
+                </div>
+                
+            </form>
+        </div>
+
+    <script src="/js/home.js"></script>
+    </body>
+</html>
